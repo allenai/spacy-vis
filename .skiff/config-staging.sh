@@ -1,2 +1,2 @@
 DOMAIN="spacy-vis.staging.apps.allenai.org"
-HTTP_PORT="3000"
+HTTP_PORT="8080"
