@@ -4,6 +4,7 @@
 # variable).
 #
 
+timeout: 15m
 steps:
 # Pull the current latest image, so we can use its cached layers.
 - id: 'pull'
