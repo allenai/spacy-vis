@@ -142,7 +142,7 @@ spec:
             initialDelaySeconds: 1
           resources:
             requests:
-              cpu: "1"
+              cpu: "0.5"
               memory: 1000Mi
 ---
 apiVersion: v1
