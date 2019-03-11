@@ -118,6 +118,7 @@ spec:
       containers:
         - name: $FULLY_QUALIFIED_APP_NAME
           image: $IMAGE
+          tty: true
           # Checks whether a newly started pod is ready to receive traffic.
           # After 6 failed checks spaced by 10 seconds, the pod will be marked Unready.
           # See https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes
