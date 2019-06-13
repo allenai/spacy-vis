@@ -136,9 +136,9 @@ local ingress = {
 // When an application is not ready traffic will instead go to other ready pods.
 // A live pod can also become unready again if the probe fails `failureThreshold` times.
 local readinessProbe = {
-    failureThreshold: 3,
+    failureThreshold: 6,
     periodSeconds: 10,
-    initialDelaySeconds: 30,  // Use a longer delay if your app loads a large model.
+    initialDelaySeconds: 1,  // Use a longer delay if your app loads a large model.
     httpGet: {
         path: '/?check=readiness',
         port: config.httpPort,
@@ -150,9 +150,9 @@ local readinessProbe = {
 // If the `livenessProbe` fails `failureThreshold` times, the pod is killed and restarted by
 // Kubernetes.
 local livenessProbe = {
-    failureThreshold: 3,
+    failureThreshold: 6,
     periodSeconds: 10,
-    initialDelaySeconds: 30,  // Use a longer delay if your app loads a large model.
+    initialDelaySeconds: 1,  // Use a longer delay if your app loads a large model.
     httpGet: {
         path: '/?check=liveness',
         port: config.httpPort,
