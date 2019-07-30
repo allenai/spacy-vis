@@ -1,5 +1,6 @@
 {
     "appName": "spacy-vis",
     "httpPort": 8080,
-    "contact": "markn"
+    "contact": "markn",
+    "team": "allennlp"
 }
